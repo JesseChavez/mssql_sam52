@@ -1,0 +1,114 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @account.email %>
+</p>
+
+<p>
+  <strong>Given name:</strong>
+  <%= @account.given_name %>
+</p>
+
+<p>
+  <strong>Family name:</strong>
+  <%= @account.family_name %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @account.nickname %>
+</p>
+
+<p>
+  <strong>Unverified email:</strong>
+  <%= @account.unverified_email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @account.status %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @account.encrypted_password %>
+</p>
+
+<p>
+  <strong>Password expires at:</strong>
+  <%= @account.password_expires_at %>
+</p>
+
+<p>
+  <strong>Daily alerts:</strong>
+  <%= @account.daily_alerts %>
+</p>
+
+<p>
+  <strong>Daily alerts at:</strong>
+  <%= @account.daily_alerts_at %>
+</p>
+
+<p>
+  <strong>Login attempts:</strong>
+  <%= @account.login_attempts %>
+</p>
+
+<p>
+  <strong>Max login attempts:</strong>
+  <%= @account.max_login_attempts %>
+</p>
+
+<p>
+  <strong>Start online at:</strong>
+  <%= @account.start_online_at %>
+</p>
+
+<p>
+  <strong>Finish online at:</strong>
+  <%= @account.finish_online_at %>
+</p>
+
+<p>
+  <strong>Auto online:</strong>
+  <%= @account.auto_online %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @account.birthday %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @account.photo %>
+</p>
+
+<p>
+  <strong>Cashback:</strong>
+  <%= @account.cashback %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @account.credit %>
+</p>
+
+<p>
+  <strong>Starts:</strong>
+  <%= @account.starts %>
+</p>
+
+<p>
+  <strong>Max starts:</strong>
+  <%= @account.max_starts %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @account.notes %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

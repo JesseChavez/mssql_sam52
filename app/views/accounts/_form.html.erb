@@ -1,0 +1,127 @@
+<%= form_with(model: account, local: true) do |form| %>
+  <% if account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :given_name %>
+    <%= form.text_field :given_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :family_name %>
+    <%= form.text_field :family_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unverified_email %>
+    <%= form.check_box :unverified_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :encrypted_password %>
+    <%= form.text_field :encrypted_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_expires_at %>
+    <%= form.datetime_select :password_expires_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_alerts %>
+    <%= form.check_box :daily_alerts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_alerts_at %>
+    <%= form.time_select :daily_alerts_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :login_attempts %>
+    <%= form.number_field :login_attempts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_login_attempts %>
+    <%= form.number_field :max_login_attempts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_online_at %>
+    <%= form.time_select :start_online_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finish_online_at %>
+    <%= form.time_select :finish_online_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :auto_online %>
+    <%= form.check_box :auto_online %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cashback %>
+    <%= form.text_field :cashback %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit %>
+    <%= form.text_field :credit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starts %>
+    <%= form.text_field :starts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_starts %>
+    <%= form.text_field :max_starts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

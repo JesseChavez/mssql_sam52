@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account</th>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Active</th>
+      <th>Publish on</th>
+      <th>Likes</th>
+      <th>Dislikes</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stories.each do |story| %>
+      <tr>
+        <td><%= story.account %></td>
+        <td><%= story.category %></td>
+        <td><%= story.title %></td>
+        <td><%= story.active %></td>
+        <td><%= story.publish_on %></td>
+        <td><%= story.likes %></td>
+        <td><%= story.dislikes %></td>
+        <td><%= story.content %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>

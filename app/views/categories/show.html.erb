@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <strong>Relevant:</strong>
+  <%= @category.relevant %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @category.score %>
+</p>
+
+<p>
+  <strong>Market value:</strong>
+  <%= @category.market_value %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @category.notes %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

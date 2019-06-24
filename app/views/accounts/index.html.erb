@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Given name</th>
+      <th>Family name</th>
+      <th>Nickname</th>
+      <th>Unverified email</th>
+      <th>Status</th>
+      <th>Encrypted password</th>
+      <th>Password expires at</th>
+      <th>Daily alerts</th>
+      <th>Daily alerts at</th>
+      <th>Login attempts</th>
+      <th>Max login attempts</th>
+      <th>Start online at</th>
+      <th>Finish online at</th>
+      <th>Auto online</th>
+      <th>Birthday</th>
+      <th>Photo</th>
+      <th>Cashback</th>
+      <th>Credit</th>
+      <th>Starts</th>
+      <th>Max starts</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.email %></td>
+        <td><%= account.given_name %></td>
+        <td><%= account.family_name %></td>
+        <td><%= account.nickname %></td>
+        <td><%= account.unverified_email %></td>
+        <td><%= account.status %></td>
+        <td><%= account.encrypted_password %></td>
+        <td><%= account.password_expires_at %></td>
+        <td><%= account.daily_alerts %></td>
+        <td><%= account.daily_alerts_at %></td>
+        <td><%= account.login_attempts %></td>
+        <td><%= account.max_login_attempts %></td>
+        <td><%= account.start_online_at %></td>
+        <td><%= account.finish_online_at %></td>
+        <td><%= account.auto_online %></td>
+        <td><%= account.birthday %></td>
+        <td><%= account.photo %></td>
+        <td><%= account.cashback %></td>
+        <td><%= account.credit %></td>
+        <td><%= account.starts %></td>
+        <td><%= account.max_starts %></td>
+        <td><%= account.notes %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account', new_account_path %>

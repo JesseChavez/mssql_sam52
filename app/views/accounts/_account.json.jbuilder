@@ -1,0 +1,2 @@
+json.extract! account, :id, :email, :given_name, :family_name, :nickname, :unverified_email, :status, :encrypted_password, :password_expires_at, :daily_alerts, :daily_alerts_at, :login_attempts, :max_login_attempts, :start_online_at, :finish_online_at, :auto_online, :birthday, :photo, :cashback, :credit, :starts, :max_starts, :notes, :created_at, :updated_at
+json.url account_url(account, format: :json)

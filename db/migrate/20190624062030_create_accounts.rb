@@ -10,10 +10,10 @@ class CreateAccounts < ActiveRecord::Migration[5.2]
       t.string :encrypted_password
       t.datetime :password_expires_at
       t.boolean :daily_alerts
-      t.time :daily_alerts_at
+      t.time :daily_alerts_at, precision: 0
       t.integer :login_attempts
       t.integer :max_login_attempts
-      t.time :start_online_at
+      t.time :start_online_at, precision: 3
       t.time :finish_online_at
       t.boolean :auto_online
       t.date :birthday

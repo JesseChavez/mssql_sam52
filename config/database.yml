@@ -8,14 +8,14 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: sam52_development
+  database: <%= "sam52_#{ENV['MODE']}_development" %>
   username: dev
   password: password
 
 test:
   <<: *default
   host: localhost
-  database: sam52_test
+  database: <%= "sam52_#{ENV['MODE']}_test" %>
   username: test
   password: password
 

@@ -1,24 +1,52 @@
-# README
+# Sample Rails App used to test the `activerecord-jdbc-alt-adapter`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+App specs:
 
-* Ruby version
+- rails 5.2.3
+- SQL Server database
 
-* System dependencies
+this app has a `MODE` environment variable which is usually used to connect to
+a specific database.
 
-* Configuration
+for example when you want to use JRuby:
 
-* Database creation
 
-* Database initialization
+Switch to JRuby
 
-* How to run the test suite
+```
+MODE=jruby bin/rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+the above command will create a database called `sam52_jruby_development`
 
-* Deployment instructions
+then:
 
-* ...
+
+```
+MODE=jruby bin/rails db:migrate
+
+
+MODE=jruby bin/rails c
+
+```
+
+For CRuby, switch to Cruby:
+
+
+```
+MODE=cruby bin/rails db:create
+```
+
+the above command will create a database called `sam52_cruby_development`
+
+then:
+
+
+```
+MODE=cruby bin/rails db:migrate
+
+
+MODE=cruby bin/rails c
+
+```

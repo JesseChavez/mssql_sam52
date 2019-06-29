@@ -44,7 +44,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 platforms :jruby do
   # gem 'activerecord-jdbc-adapter', path: '~/ibsa/other_gems/activerecord-jdbc-adapter'
 
-  gem 'activerecord-jdbc-alt-adapter', '~> 52.2.0', require: 'arjdbc'
+  gem 'activerecord-jdbc-alt-adapter', '~> 52.2.1', require: 'arjdbc'
   gem 'jdbc-mssql'
 end
 

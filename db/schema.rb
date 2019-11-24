@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_062035) do
+ActiveRecord::Schema.define(version: 2019_11_24_043542) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 2019_06_24_062035) do
     t.decimal "score", precision: 4, scale: 3
     t.decimal "market_value", precision: 6, scale: 2
     t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.image "legacy_photo", limit: 2147483647
+    t.datetime_basic "available_at"
+    t.datetime_basic "expires_at"
+  end
+
+  create_table "customs", primary_key: "remote_id", force: :cascade do |t|
+    t.string "task"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
@@ -44,7 +42,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 platforms :jruby do
   # gem 'activerecord-jdbc-adapter', path: '~/ibsa/other_gems/activerecord-jdbc-adapter'
 
-  gem 'activerecord-jdbc-alt-adapter', '~> 52.2.1', require: 'arjdbc'
+  gem 'activerecord-jdbc-alt-adapter', '~> 52.4.0'
   gem 'jdbc-mssql'
 end
 

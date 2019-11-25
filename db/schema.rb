@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_24_043542) do
+ActiveRecord::Schema.define(version: 2019_11_25_221438) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 2019_11_24_043542) do
     t.decimal "score", precision: 4, scale: 3
     t.decimal "market_value", precision: 6, scale: 2
     t.text "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime_basic "created_at"
+    t.datetime_basic "updated_at"
     t.image "legacy_photo", limit: 2147483647
     t.datetime_basic "available_at"
     t.datetime_basic "expires_at"

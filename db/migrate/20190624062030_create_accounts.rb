@@ -19,7 +19,7 @@ class CreateAccounts < ActiveRecord::Migration[5.2]
       t.date :birthday
       t.binary :photo
       t.decimal :cashback
-      t.decimal :credit, precision: 18, scale: 2
+      t.decimal :credit, precision: 18, scale: 2, default: 1.456
       t.float :starts
       t.float :max_starts
       t.text :notes

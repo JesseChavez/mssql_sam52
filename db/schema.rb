@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_221438) do
     t.date "birthday"
     t.binary "photo"
     t.decimal "cashback", precision: 18
-    t.decimal "credit", precision: 18, scale: 2
+    t.decimal "credit", precision: 18, scale: 2, default: "1.46"
     t.float "starts"
     t.float "max_starts"
     t.text "notes"
